@@ -1,16 +1,16 @@
-import logo_react from '../img/reactjs-icon_2.png'
-export default function  Main() {
-	return (
-		<main className="main">
-			<img className='main__react-logo' src={logo_react} alt='logo-react'/>
-			<h1 className="main__title">Fun facts about React</h1>
-			<ul className="main__list"> 
-				<li className="main__list-item">Was first released in 2013</li>
-				<li className="main__list-item">Was originally created by Jordan Walke</li>
-				<li className="main__list-item">Has well over 100K stars on GitHub</li>
-				<li className="main__list-item">Is maintained by Facebook</li>
-				<li className="main__list-item">Powers thousands of enterprise apps, including mobile apps</li>
-			</ul>
-		</main>
-	)
+import React from "react"
+
+export default function Main(props) {
+    return (
+        <main className={props.darkMode ? "dark" : ""}>
+            <h1 className="main--title">Fun facts about React</h1>
+            <ul className="main--facts">
+                <li>Was first released in 2013</li>
+                <li>Was originally created by Jordan Walke</li>
+                <li>Has well over 100K stars on GitHub</li>
+                <li>Is maintained by Facebook</li>
+                <li>Powers thousands of enterprise apps, including mobile apps</li>
+            </ul>
+        </main>
+    )
 }
